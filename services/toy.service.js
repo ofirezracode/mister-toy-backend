@@ -8,6 +8,7 @@ function query(filterBy = {}) {
     toysToDisplay = toysToDisplay.filter((toy) => regExp.test(toy.name))
   }
   if (filterBy.inStock && filterBy.inStock !== 'all') {
+    console.log('filterBy.inStock', filterBy.inStock)
     toysToDisplay = toysToDisplay.filter((toy) => filterBy.inStock === toy.inStock)
   }
   if (filterBy.labels && filterBy.labels.length > 0) {
